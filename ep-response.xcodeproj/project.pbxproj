@@ -12,6 +12,7 @@
 		E95CA7D11DFA403200A6269B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E95CA7CF1DFA403200A6269B /* Main.storyboard */; };
 		E95CA7D31DFA403200A6269B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E95CA7D21DFA403200A6269B /* Assets.xcassets */; };
 		E95CA7D61DFA403200A6269B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E95CA7D41DFA403200A6269B /* LaunchScreen.storyboard */; };
+		E95CA7E21DFA40DB00A6269B /* AM_RESPONSE.m in Sources */ = {isa = PBXBuildFile; fileRef = E95CA7E11DFA40DB00A6269B /* AM_RESPONSE.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		E95CA7D21DFA403200A6269B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E95CA7D51DFA403200A6269B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E95CA7D71DFA403200A6269B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E95CA7DD1DFA407600A6269B /* ep-response-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ep-response-Bridging-Header.h"; sourceTree = "<group>"; };
+		E95CA7E01DFA40DB00A6269B /* AM_RESPONSE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AM_RESPONSE.h; sourceTree = "<group>"; };
+		E95CA7E11DFA40DB00A6269B /* AM_RESPONSE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AM_RESPONSE.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,8 +42,11 @@
 		E95CA7BF1DFA403100A6269B = {
 			isa = PBXGroup;
 			children = (
+				E95CA7E01DFA40DB00A6269B /* AM_RESPONSE.h */,
+				E95CA7E11DFA40DB00A6269B /* AM_RESPONSE.m */,
 				E95CA7CA1DFA403100A6269B /* ep-response */,
 				E95CA7C91DFA403100A6269B /* Products */,
+				E95CA7DD1DFA407600A6269B /* ep-response-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +103,7 @@
 				TargetAttributes = {
 					E95CA7C71DFA403100A6269B = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E95CA7CE1DFA403200A6269B /* ViewController.swift in Sources */,
+				E95CA7E21DFA40DB00A6269B /* AM_RESPONSE.m in Sources */,
 				E95CA7CC1DFA403200A6269B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,10 +269,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "ep-response/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "LEYE.ep-response";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ep-response-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -272,10 +284,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "ep-response/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "LEYE.ep-response";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ep-response-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -299,6 +313,7 @@
 				E95CA7DC1DFA403200A6269B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
